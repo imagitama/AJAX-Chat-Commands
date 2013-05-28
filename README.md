@@ -28,6 +28,7 @@ function parseCustomCommands($text, $textParts) {
 	
 }
 ```
+(there's probably another step but I forgot and I can't be fucked checking)
 
 ##Extra Installation
 I was too lazy to query the database to automatically create tables, so you may need to create a few of them yourself if you want that extra functionality (such as the trivia minigame or custom commands).
