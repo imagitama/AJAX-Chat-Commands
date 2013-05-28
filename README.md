@@ -8,24 +8,26 @@ Blueimp AJAX Chat commands extension.
 - Upload all files to your AJAX chat directory
 - Add the following code to the end of the class in /lib/class/CustomAJAXChat.php
 
-	function parseCustomCommands($text, $textParts) {
+```
+function parseCustomCommands($text, $textParts) {
 		
-		//Assume it was parsed correctly...
+	//Assume it was parsed correctly...
 
-		$success = true;
+	$success = true;
 		
 		
 
-		//Attempt to parse it elsewhere...
+	//Attempt to parse it elsewhere...
 		
-		require(AJAX_CHAT_PATH.'lib/class/CustomAJAXCommands.php');
+	require(AJAX_CHAT_PATH.'lib/class/CustomAJAXCommands.php');
 
 
-		//If it worked...
+	//If it worked...
 		
-		return $success;
+	return $success;
 	
-	}
+}
+```
 
 ##Extra Installation
 I was too lazy to query the database to automatically create tables, so you may need to create a few of them yourself if you want that extra functionality (such as the trivia minigame or custom commands).
@@ -42,5 +44,9 @@ Things I wanted to do:
 - Use a database handler instead of writing out every query
 - Use more constants for things like database names & fields
 - Automatically create databases
+
+Please keep in mind that some of these commands (especially the minigames) add extra load to your server. Every time your chat polls the server to check for updates on the games, it runs several database queries and does processing. If you get a lot of users in the channel, your whole server will suffer.
+
+I had to remove my AJAX Chat after about 20 users in the chat made my forum struggle. We switched to IRC, which can handle shitloads of users really easily and also features commands, although it takes a lot more work and isn't as integrated as PHP/AJAX.
 
 ###I hope you find it fun and somewhat useful!
