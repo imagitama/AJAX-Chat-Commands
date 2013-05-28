@@ -31,10 +31,11 @@ function parseCustomCommands($text, $textParts) {
 (there's probably another step but I forgot and I can't be fucked checking)
 
 ##Extra Installation
-I was too lazy to query the database to automatically create tables, so you may need to create a few of them yourself if you want that extra functionality (such as the trivia minigame or custom commands).
+~~I was too lazy to query the database to automatically create tables, so you may need to create a few of them yourself if you want that extra functionality (such as the trivia minigame or custom commands).
 - ajax_chat_custom
 - ajax_chat_usercustom
-- ajax_chat_trivia
+- ajax_chat_trivia~~
+Just use the queries in **database.sql** and sit back and relax! Thanks Cameron:D!
 
 ##Notes
 Yes I know it's coded poorly. It was a little project I threw together when I was bored. I don't have any plans to improve it since I don't use the chat system anymore, but I encourage anyone to improve on what I've written.
